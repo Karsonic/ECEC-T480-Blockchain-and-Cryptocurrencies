@@ -28,15 +28,14 @@ class MerkleBuilder:
         """
         # Read in data from file
         data = self._load_data()
-
         # Do first encoding
         hashes = self._calculate_first_hash(data)
-
         # Performs next step of hashing tree
         return self._recursive_hash(hashes)
 
     def _load_data(self) -> List[str]:
         """Reads the file lines into a list with spaces and newlines removed"""
+        # This also removes blank lines
         with open(self.filename) as file:
             return [l for l in (line.strip() for line in file.readlines()) if l]
 
