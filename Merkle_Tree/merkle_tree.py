@@ -27,9 +27,9 @@ class MerkleNode:
 
     def __str__(self, level=0):
         ret = '{0} {1}\n'.format("\t"*level, repr(self.hash))
-        if self.l_node:
+        if self.l_node is not None:
             ret += self.l_node.__str__(level + 1)
-        if self.r_node:
+        if self.r_node is not None:
             ret += self.r_node.__str__(level + 1)
         return ret
 
