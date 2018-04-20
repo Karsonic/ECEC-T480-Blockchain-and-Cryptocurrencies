@@ -66,11 +66,11 @@ class MerkleBuilder:
         self.filename = filename
         self.duplicate_odds = duplicate_odds
 
-    def build_tree(self) -> str:
-        """Calculates the hash of the Merkle Tree root
+    def build_tree(self) -> MerkleNode:
+        """Calculates the Merkle Tree root
         
         Returns:
-            str -- The Merkle Tree root as a string of hex digits
+            MerkleNode -- The Merkle Tree root
         """
         # Read in data from file
         data = self._load_data()
