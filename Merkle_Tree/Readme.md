@@ -1,6 +1,6 @@
-## Assignment Name
-
-Merkle Trees
+---
+title: Merkle Trees
+---
 
 
 ### Summary
