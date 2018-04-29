@@ -12,7 +12,10 @@ and Ethereum blockchain ecosystem.
 
 ### Assignments
 
-1) [Merkle Trees](/Merkle_Tree/) in Python
+1) [Merkle Trees](Merkle_Tree/) in Python
+
 2) ScroogeCoin Tx Handler in Java
+
 3) 
+
 4) 
