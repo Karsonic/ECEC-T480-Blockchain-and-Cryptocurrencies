@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+## Summary of Class
 
-You can use the [editor on GitHub](https://github.com/Karsonic/ECEC-T480-Blockchain-and-Cryptocurrencies/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This course provides students with hands-on experience with blockchain and cryptocurrency technologies.
+Throughout the course, students will be exposed to weekly lectures introducing blockchain concepts integrated
+into five programming assignments. Students analyze underlying blockchain infrastructure including software
+architecture, algorithms, security primitives, and decentralization. The hands-on assignments offer practical,
+real-world, and open-source blockchain platforms experience with Bitcoin and Ethereum, in addition to an
+overview of blockchain technologies and platforms developed within the past few years. Ultimately, the goal
+of the course is to provide through lecture and hands-on exercises, and an overall understanding of the Bitcoin
+and Ethereum blockchain ecosystem.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Assignments
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Karsonic/ECEC-T480-Blockchain-and-Cryptocurrencies/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+1) [Merkle Trees](/Merkle_Tree/) in Python
+2) ScroogeCoin Tx Handler in Java
+3) 
+4) 
