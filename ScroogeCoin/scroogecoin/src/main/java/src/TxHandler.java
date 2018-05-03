@@ -29,7 +29,7 @@ public class TxHandler {
      */
     public boolean isValidTx(Transaction tx) {
         ArrayList<UTXO> ledgerUTXOs = pool.getAllUTXO();
-        UTXOPool claimedUTXOPool = new UTXOPool();
+        UTXOPool unclaimedUTXOPool = new UTXOPool(this.pool);
         ArrayList<Output> txOutputs = tx.getOutputs();
 
         for (int i = 0; i < tx.numOutputs(); i++) {
@@ -37,9 +37,14 @@ public class TxHandler {
             // (1)
             if (!ledgerUTXOs.contains(txUTXO)) 
                 return false;
+            // (3)
+            if (!unclaimedUTXOPool.contains(txUTXO))
+                return false;
             // (4)
             if (txOutputs.get(i).value < 0)
                 return false;
+            
+            unclaimedUTXOPool.removeUTXO(txUTXO);
         }
 
         // TODO: Verify signatures
