@@ -61,6 +61,8 @@ public class TxHandler {
         // (5)
         if (outputValue > inputValue)
             return false;
+
+        return true;
     }
 
     /**
