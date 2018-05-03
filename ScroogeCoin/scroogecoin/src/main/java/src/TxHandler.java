@@ -1,5 +1,10 @@
 package src;
 
+import java.util.ArrayList;
+
+import src.Transaction.Input;
+import src.Transaction.Output;
+
 public class TxHandler {
     
     private UTXOPool pool;
@@ -23,7 +28,21 @@ public class TxHandler {
      *     values; and false otherwise.
      */
     public boolean isValidTx(Transaction tx) {
-        
+        ArrayList<UTXO> ledgerUTXOs = pool.getAllUTXO();
+        UTXOPool claimedUTXOPool = new UTXOPool();
+        ArrayList<Output> txOutputs = tx.getOutputs();
+
+        for (int i = 0; i < tx.numOutputs(); i++) {
+            UTXO txUTXO = new UTXO(tx.getHash(), i);
+            // (1)
+            if (!ledgerUTXOs.contains(txUTXO)) 
+                return false;
+            // (4)
+            if (txOutputs.get(i).value < 0)
+                return false;
+        }
+
+        // TODO: Verify signatures
     }
 
     /**
@@ -32,7 +51,20 @@ public class TxHandler {
      * updating the current UTXO pool as appropriate.
      */
     public Transaction[] handleTxs(Transaction[] possibleTxs) {
-        // IMPLEMENT THIS
+        ArrayList<Transaction> validTxs = new ArrayList<>();
+
+        for (Transaction tx: possibleTxs) {
+            if(isValidTx(tx)) {
+                for (int i = 0; i < tx.numOutputs(); i++) {
+                    UTXO txUTXO = new UTXO(tx.getHash(), i);
+                    pool.removeUTXO(txUTXO);
+                }
+                validTxs.add(tx);
+            }
+        }
+
+        Transaction[] retArray = new Transaction[validTxs.size()];
+        return validTxs.toArray(retArray);
     }
 
 }
