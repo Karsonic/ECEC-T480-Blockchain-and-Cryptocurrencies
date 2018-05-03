@@ -1,4 +1,4 @@
-package ecect480.scroogecoin;
+package src;
 
 /**
  * Hello world!
