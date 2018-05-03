@@ -10,6 +10,7 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+.settings
 
 #
 # IntelliJ
@@ -18,3 +19,7 @@ buildNumber.properties
 .idea/*
 !.idea/runConfigurations/
 
+#
+# VS Code
+# 
+.vscode
